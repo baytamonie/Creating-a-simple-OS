@@ -1,0 +1,16 @@
+nasm <filename> -f (file type) -o (output file)
+; --> used to put a comment
+db 0-->data byte 0
+dw  -->data word (16 bits , 2 bytes)
+times (number) db x --> inserts (number)bytes (x)
+db $ puts in current offset in the file
+db $$ refers to origin 
+ times 510-($-$$) db 0
+ db 'chars' -> writes ascii values into the output
+ ax bx cx dx (general purpose registers)
+ mov ax, 0x12
+ registers store 16 bits
+ mov dl--> mov this byte into the low 8 bits of the register
+ mov dh--> mov this byte into the higher 8 bits of the register
+ int 0x10-->interrrupt to call
+ mov ah, 0x0e ; BIOS scrolling teletype function
