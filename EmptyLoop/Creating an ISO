@@ -1,0 +1,7 @@
+truncate [file.bin] -s 2880k
+ex:
+~/Documents/OS/Creating-a-simple-OS/HEX$ truncate hex.bin -s 2880k
+
+mkisofs -o [fileoutput name] -b [filename] path/
+ex:
+~/Documents/OS/Creating-a-simple-OS$ mkisofs -o HEX/image.iso -b hex.bin  HEX/
